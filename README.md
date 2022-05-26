@@ -16,7 +16,7 @@ An anonymized private repo for our work under review.
 ### How to use
 - To simply load PyTorch model :
 ```
-#~/SyncNAS/\\
+#~/SyncNAS/
 from torch_modules import TorchBranchedModel
 from utils import load_params
 #base_model: mobilenet_v2
