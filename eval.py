@@ -55,7 +55,8 @@ def main():
 
     #Load PyTorch Model
     print("\nBase Model: %s" %args.base_model)
-    model_config = "model_configs/syncnas_"+args.base_model+"_100.json"
+    filename = "syncnas_"+args.base_model+"_100.json"
+    model_config = "model_configs/"+filename
     model = TorchBranchedModel(model_config)
 
 
@@ -65,7 +66,7 @@ def main():
 
 
     #Load Params by API Call
-    model.load_state_dict(load_adapted_params(args.base_model))
+    model.load_state_dict(load_params(args.base_model))
     model = torch.nn.DataParallel(model).cuda()
 
 
