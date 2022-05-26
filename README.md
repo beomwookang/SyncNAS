@@ -19,11 +19,11 @@ An anonymized private repo for our work under review.
 #~/SyncNAS/
 
 from torch_modules import TorchBranchedModel
-from utils import load_adapted_params
+from utils import load_params
 
 #base_model: mobilenet_v2
 model = TorchBranchedModel('model_configs/syncnas_mobilenet_v2_100.json')
-model.load_state_dict(load_adapted_params('syncnas_mobilenet_v2_100.pth'))
+model.load_state_dict(load_params('syncnas_mobilenet_v2_100.pth'))
 ```
 
 - To evaluate on ImageNet :

@@ -25,8 +25,8 @@ def get_num_workers(server_name, name_list_path='ServerList.json'):
     return name_list[server_name]
 
 
-def load_adapted_params(model_name='syncnas_mobilenet_v2_100.json'):
-    assert model_name in ['syncnas_mobilenet_v2_100.json', 'syncnas_mnasnet_b1_100.json', 'syncnas_fbnet_c_100.json']
+def load_params(model_name='syncnas_mobilenet_v2_100.pth'):
+    assert model_name in ['syncnas_mobilenet_v2_100.pth', 'syncnas_mnasnet_b1_100.pth', 'syncnas_fbnet_c_100.pth']
     return torch.load("pretrained/"+model_name)
 
 
