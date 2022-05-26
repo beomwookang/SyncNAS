@@ -25,11 +25,9 @@ def get_num_workers(server_name, name_list_path='ServerList.json'):
     return name_list[server_name]
 
 
-def load_adapted_params(base_model_name='mobilenet_v2'):
-    assert base_model_name in ['mobilenet_v2', 'mnasnet_b1', 'fbnet_c']
-
-    print("Loading %s_adapted params...\n" %base_model_name)
-    return torch.load("pretrained/syncnas_"+args.base_model+"_100.json"
+def load_adapted_params(model_name='syncnas_mobilenet_v2_100.json'):
+    assert model_name in ['syncnas_mobilenet_v2_100.json', 'syncnas_mnasnet_b1_100.json', 'syncnas_fbnet_c_100.json']
+    return torch.load("pretrained/"+model_name)
 
 
 # source code: https://github.com/clovaai/CutMix-PyTorch/blob/master/utils.py
