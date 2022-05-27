@@ -108,7 +108,7 @@ class TorchBranchedStage(nn.Module):
         return x
 
 #Build Model with Configs.json
-class TorchPretrainedModel(nn.Module):
+class TorchBaseModel(nn.Module):
     def __init__(self, path, num_classes=1000, input_size=224, dropout=0.2):
         super(TorchPretrainedModel, self).__init__()
 
@@ -239,3 +239,4 @@ class TorchBranchedModel(nn.Module):
                 nn.init.kaiming_uniform_(m.weight, mode="fan_out",
                                          nonlinearity="sigmoid")
                 nn.init.zeros_(m.bias)
+

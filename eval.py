@@ -15,8 +15,7 @@ import torchvision.models as models
 from ptflops import get_model_complexity_info
 import warnings
 
-from modules.torch_modules import TorchBranchedModel
-from utils import load_adapted_params
+from torch_modules import TorchBranchedModel
 
 warnings.filterwarnings("ignore")
 
@@ -54,19 +53,22 @@ def main():
     numberofclass = 1000
 
     #Load PyTorch Model
+    assert args.base_model in ['mobilenet_v2', 'mnasnet_b1', 'fbnet_c']
     print("\nBase Model: %s" %args.base_model)
-    filename = "syncnas_"+args.base_model+"_100.json"
-    model_config = "model_configs/"+filename
+    model_name = "syncnas_"+args.base_model+"_100"
+    model_config = "model_configs/"+model_name+".json"
     model = TorchBranchedModel(model_config)
 
 
     #Count Model Complexity
     macs, params = get_model_complexity_info(model, (3,224,224), as_strings=True, print_per_layer_stat=False, verbose=False)
+    print("\nLoaded Model: %s" %(model_name))
     print("MACs: %s, Params: %s" %(macs, params))
 
 
     #Load Params by API Call
-    model.load_state_dict(load_params(args.base_model))
+    pretrained = "pretrained/"+model_name+".pth"
+    model.load_state_dict(torch.load(pretrained))
     model = torch.nn.DataParallel(model).cuda()
 
 
@@ -76,7 +78,7 @@ def main():
     cudnn.benchmark = True
 
     # evaluate on validation set
-    print("Validating...")
+    print("\nValidating...")
     acc1, acc5, val_loss = validate(val_loader, model, criterion)
 
     print('Accuracy top-1: ', acc1, '\t\tAccuracy top-5: ', acc5)
