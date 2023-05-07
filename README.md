@@ -41,7 +41,7 @@ TBD
 
 ## Appendix
 
-### Lightweight Model Design Trend
+### A. Lightweight Model Design Trend
 
 \\<!-- 마크다운 테이블 첨부 -->
 
