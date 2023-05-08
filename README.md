@@ -42,8 +42,16 @@ TBD
 ## Appendix
 
 ### A. Lightweight Model Design Trend
+- The recent lightweight CNNs consist of multiple inverted residual (MBConv) blocks, following the design convention inspired by MobileNetV2 [1] due to its computational efficiency.
+  - *stages*: The conventional criteria that a number of MBConv blocks are grouped together
+  - *Exp*: The expanded channel size of each MBConv layer
+  - *Out*: The output channel size of each MBConv layer
+  - *Stride*: The stride size of a depthwise convolution in each MBConv layer
+  - *Kernel*: The kernel size of a depthwise convolution in each MBConv layer
+- Note that $*$ mark indicates that squeeze-and-excitation is applied. 
+- We omitted other details, such as nonlinearities, to highlight the general structure.
 
-\* Each stage is Inverted Residual (MBConv) Block Specification (Exp-Out,Stride,Kernel)
+**\* Each bracket in stages specify each MBConv Block in the format of (*Exp*-*Out*,*Stride*,*Kernel*)**
 
 |         Model         | Stem (Out) |    Stage 1   |                             Stage 2                            |                                       Stage 3                                      |                                            Stage 4                                           |                                            Stage 5                                           |                                    Stage 6                                    |                   Stage 7                   |
 |:---------------------:|:----------:|:------------:|:--------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|:-------------------------------------------:|
