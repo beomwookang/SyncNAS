@@ -2,7 +2,7 @@
 
 An anonymized private repo for our work under review.
 
-## Evaluation of Pre-trained version of our model 
+## Evaluation of Pre-trained Versions of Our models
 
 ### Requirements
 - Install python libraries:
@@ -51,7 +51,7 @@ TBD
 - Note that $*$ mark indicates that squeeze-and-excitation is applied. 
 - We omitted other details, such as nonlinearities, to highlight the general structure.
 
-**\* Each bracket in stages specify MBConv Block in the format of (*Exp*-*Out*,*Stride*,*Kernel*)**
+**\* Each bracket in stages specifies MBConv Block in the format of (*Exp*-*Out*,*Stride*,*Kernel*)**
 
 |         Model         | Stem (Out) |    Stage 1   |                             Stage 2                            |                                       Stage 3                                      |                                            Stage 4                                           |                                            Stage 5                                           |                                    Stage 6                                    |                   Stage 7                   |
 |:---------------------:|:----------:|:------------:|:--------------------------------------------------------------:|:----------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|:-------------------------------------------:|
@@ -76,7 +76,7 @@ We visualize the network architectures searched by SyncNAS below. Each block is 
 ![model_arch](https://github.com/beomwookang/SyncNAS/blob/main/pretrained/Searched_Models_Arch.png)
 
 
-## Baseline model traning information
+## Baseline Model Traning Information
 - Optimizer: Stochastic Gradient Descent
 - Learning Rate Scheduler: Cosine Annealing with Warm Restarts
   - Warm-up: 10 epochs
