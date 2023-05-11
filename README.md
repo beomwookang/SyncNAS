@@ -75,7 +75,8 @@ We visualize the network architectures searched by SyncNAS below. Each block is 
 
 ![model_arch](https://github.com/beomwookang/SyncNAS/blob/main/pretrained/Searched_Models_Arch.png)
 
-*Baseline model traning information
+
+## Baseline model traning information
 - Optimizer: Stochastic Gradient Descent
 - Learning Rate Scheduler: Cosine Annealing with Warm Restarts
   - Warm-up: 10 epochs
