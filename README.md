@@ -34,12 +34,13 @@ $ python3 eval.py --base_model mobilenet_v2 --path 'your/path/to/imagenet'
 
 <br>
 
+## Monte Carlo Tree Search
+- Algorithm 1 in our paper corresponds to SyncNAS/src/local_worker.py"
+- Algorithm 2 in our paper corresponds to SyncNAS/src/mcts.py"
+
+<br>
+
 ## Appendix
-### A. Monte Carlo Tree Search
-- Algorithm 1 in our paper corresponds to SyncNAS/mcts/local_worker.py"
-- Algorithm 2 in our paper corresponds to SyncNAS/mcts/mcts.py"
-
-
 ### B. Lightweight Model Design Trend
 - The recent lightweight CNNs consist of multiple inverted residual (MBConv) blocks, following the design convention inspired by MobileNetV2 [1] due to its computational efficiency.
   - *stages*: The conventional criteria that a number of MBConv blocks are grouped together
