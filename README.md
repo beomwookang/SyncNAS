@@ -67,6 +67,13 @@ TBD
 |      MixNet-M [8]     |    (24)    |  (24-24,1,3) |                (144-32,2,3/5/7) <br> (96-32,1,3)               | (192-40,2,3/5/7/9)* <br> (240-40,1,3/5)* <br> (240-40,1,3/5)* <br> (240-40,1,3/5)* | (240-80,2,3/5/7)* <br> (240-80,1,3/5/7/9)* <br> (240-80,1,3/5/7/9)* <br> (240-80,1,3/5/7/9)* | (480-120,1,3)* <br> (360-120,1,3/5/7/9)* <br> (360-120,1,3/5/7/9)* <br> (360-120,1,3/5/7/9)* |   (720-200,2,3/5/7/9)* <br> (1200-200,1,3/5/7/9)* <br> (1200-200,1,3/5/7/9)*  | (1200-200,1,3/5/7/9)*                       |
 |       ReXNet [9]      |    (32)    |  (32-16,1,3) |                  (96-27,2,3) <br> (162-38,1,3)                 |                          (228-50,2,3)* <br> (300-61,1,3)*                          |                      (366-72,2,3)* <br> (432-84,1,3)* <br> (504-95,1,3)*                     |                    (570-106,1,3)* <br> (636-117,1,3)* <br> (702-128,1,3)*                    |   (768-140,2,3)* <br> (840-151,1,3)* <br> (906-162,1,3)* <br> (972-174,1,3)*  |  (1044-185,1,3)                             |
 
+<br>
+
+### B. Visualization of Searched Models
+
+We visualize the network architectures searched by SyncNAS below. Each block is parameterized by in_c, exp_c, out_c, k, and s, depending on the type of block.
+
+![model_arch](https://github.com/beomwookang/SyncNAS/blob/main/pretrained/Searched_Models_Arch.png)
 
 
 <br>
