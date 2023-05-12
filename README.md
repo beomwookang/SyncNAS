@@ -1,7 +1,5 @@
 # Synchronization-aware NAS for an Efficient Collaborative Inference on Mobile Platforms
 
-An anonymized private repo for our work under review.
-
 ## Evaluation of Pre-trained Versions of Our models
 
 ### Requirements
