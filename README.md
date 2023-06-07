@@ -1,5 +1,7 @@
 # Synchronization-aware NAS for an Efficient Collaborative Inference on Mobile Platforms
 
+**(NOTICE) Our paper has been accepted at [LCTES 2023](https://pldi23.sigplan.org/home/LCTES-2023#program)!**
+
 ## Evaluation of Pre-trained Versions of Our models
 
 ### Requirements
