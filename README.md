@@ -21,7 +21,7 @@
 #~/SyncNAS/
 from torch_modules import TorchBranchedModel
 model = TorchBranchedModel('model_configs/syncnas_mobilenet_v2_100.json')	#base_model: mobilenet_v2    
-model.load_state_dict(load_params('syncnas_mobilenet_v2_100.pth'))
+model.load_state_dict(load_params('pretrained/syncnas_mobilenet_v2_100.pth'))
 ```
 
 - To evaluate on ImageNet :
